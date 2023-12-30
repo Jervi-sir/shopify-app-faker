@@ -41,7 +41,7 @@ class FakerController extends Controller
 
         DeleteProducts::dispatch($user);
 
-        if ($user->plan->price > 0) {
+        if ($user->plan?->price > 0) {
             DeleteCustomers::dispatch($user);
         }
 
